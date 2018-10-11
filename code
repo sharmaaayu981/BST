@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+struct node
+{
+int data;
+node *left;
+node *right;
+};
+node *root= NULL;
+node* newNode(int n)
+{
+    node *newNode= new node();
+    newNode->data=n;
+    newNode->left=NULL;
+    newNode->right=NULL;
+    return newNode;
+
+}
+node* Insert(int n)
+{
+    if(root==NULL)
+    {
+        root=newNode(n);
+    }
+    else if(n <= root->data)
+    {
+        root->left=Insert(n);
+    }
+    else
+    {
+        root->right=Insert(n);
+    }
+
+}
+int main()
+{
+    int n,i;
+    cout<<"How Many Entries You Want To Do?";
+    cin>>n;
+    while(n!=0)
+    {
+        cout<<"enter values";
+        cin>>i;
+        Insert(i);
+        n--;
+    }
+
+}
+
+
