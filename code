@@ -1,4 +1,8 @@
+
 #include<bits/stdc++.h>
+//binary search tree.
+//viveksingh contribution
+#include<iostream>
 
 using namespace std;
 // Creating the structure
